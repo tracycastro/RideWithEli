@@ -12,37 +12,40 @@
 
 <body>
     <header role="banner">
-        <h1>
+        <div class="hero-image">
             <a aria-current="page" href="/">
-                <img width="400" src="/images/2021Logo2.svg" alt="Ride with Eli">
+                <img width="400" class="ride-with-eli" src="/images/2021Logo2.svg" alt="Ride with Eli">
             </a>
-        </h1>
+        </div>
     </header>
     <main role="main">
         <div class="container">
-            <p class="user"></p>
+            <div class="progress">
+
+            </div>
+            <!--/.progress-->
+
             <p>In <span class="days"></span> days, I’ll be riding my bike 150 miles through the Texas Hill Country in
-                the
-                <span class="ride"></span>. My goal is to end Multiple Sclerosis forever.</p>
+                the <span class="ride"></span>. My goal is to end Multiple Sclerosis forever.</p>
 
             <p>Millions suffering from MS need our help. The last year has been particularly tough on people living with
-                MS
-                –
-                drastic shortfalls in funding for National MS Society and other nonprofits has hampered the aid, support
-                and
+                MS – drastic shortfalls in funding for National MS Society and other nonprofits has hampered the aid,
+                support and
                 research that this community depends on. With your help, I aim to raise $<span class="target"></span>
                 for
                 the
-                National MS Society – I’ve still got $<span class="remaining"></span> to go to hit that goal.</p>
+                National MS Society – I’ve still got $<span class="remaining"></span> to go to hit that goal. I'd surely
+                appreciate the help.</p>
 
-            <p>It has been a wreck of year by any standard. I hope you are well and can take a beat just to acknowledge
-                what
-                a
-                rock star you are for surviving it all. After that, if <a
-                    href="https://mssociety.donordrive.com/index.cfm?fuseaction=donate.participant&participantID=38761"
-                    target="_blank">donating to this cause</a> fits into your plans, I’d surely appreciate the help.</p>
+            <div class="donors">
+                <ul class="donor-list">
+
+                </ul>
+
+            </div>
+            <!--/.donors-->
+
         </div>
-
         <!--.container-->
         <div class="wrapper">
             <a class="button"
@@ -52,6 +55,7 @@
         <!--.wrapper-->
     </main>
     <script src="/main.js"></script>
+    <script src="/donors.js"></script>
 </body>
 
 </html>

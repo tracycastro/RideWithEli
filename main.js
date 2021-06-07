@@ -13,6 +13,21 @@ const rideDate = new Date('10/02/2021');
 const today = new Date();
 const difference = rideDate.getTime() - today.getTime();
 const countdown = Math.ceil(difference / (1000 * 3600 * 24));
+const progressValue = document.querySelector(".progress");
+
+// shrink on scroll
+const heroImage = document.querySelector(".ride-with-eli");
+
+document.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        heroImage.width = "320";
+        // console.log("hey!");
+    } else {
+        heroImage.width = "400";
+    }
+});
+
+// JSON DATA in Paragraph
 
 eliPromise
     .then((response) => {
@@ -28,6 +43,10 @@ eliPromise
         target.innerHTML = `${data.fundraisingGoal}`;
         remaining.innerHTML = `${(data.fundraisingGoal) - (data.sumDonations)}`;
         days.innerHTML = `${countdown}`;
+        const progressBar = (data.sumDonations / data.fundraisingGoal) * 100;
+        console.log(`${progressBar}% is current donations`);
+        progressValue.innerHTML = `<progress id="file" class="bar" max="100" value=${progressBar}></progress>`;
     })
     .catch(handleError);
+
 
