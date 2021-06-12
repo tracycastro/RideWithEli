@@ -118,6 +118,7 @@ li {
 @media (max-width: 600px) {
     img.ride-with-eli {
         max-width: 90%;
+        padding: 1em;
     }
     body {
         font-size: 1.2em;
