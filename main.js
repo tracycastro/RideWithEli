@@ -16,16 +16,16 @@ const countdown = Math.ceil(difference / (1000 * 3600 * 24));
 const progressValue = document.querySelector(".progress");
 
 // shrink on scroll
-const heroImage = document.querySelector(".ride-with-eli");
+// const heroImage = document.querySelector(".ride-with-eli");
 
-document.addEventListener('scroll', function() {
-    if (window.scrollY > 75) {
-        heroImage.width = "320";
-        // console.log("hey!");
-    } else {
-        heroImage.width = "400";
-    }
-});
+// document.addEventListener('scroll', function() {
+//     if (window.screen.width >= 641 && window.scrollY > 75) {
+//         heroImage.width = "320";
+//         // console.log("hey!");
+//     } else {
+//         heroImage.width = "400";
+//     }
+// });
 
 // JSON DATA in Paragraph
 
