@@ -15,16 +15,16 @@ tracyPromise.then(response2 => {
         if (!obj.displayName) {
             obj.displayName = "anonymous"
         }
-        if (obj.displayName === "Facebook Donor") {
-            donorList.innerHTML += `<ul><a href="/" target="_blank">Facebook Donor</a></ul>`
-        }
+        // if (obj.displayName === "Facebook Donor") {
+        //     donorList.innerHTML += `<ul><a href="/" target="_blank">Facebook Donor</a></ul>`
+        // }
         if (!obj.amount && obj.displayName != "Facebook Donor") {
             console.log(`${obj.displayName}`)
-            donorList.innerHTML += `<ul>${`${obj.displayName}`}</ul>`;
+            donorList.innerHTML += `<li>${`${obj.displayName}`}</li>`;
         }
         if (obj.amount && obj.displayName != "Facebook Donor") {
         console.log(`${obj.displayName}: $${obj.amount}`);
-        donorList.innerHTML += `<ul>${`${obj.displayName}: $${obj.amount}`}</ul>`;
+        donorList.innerHTML += `<li>${`${obj.displayName}: $${obj.amount}`}</li>`;
     }
 
     };

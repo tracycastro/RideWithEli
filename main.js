@@ -19,7 +19,7 @@ const progressValue = document.querySelector(".progress");
 const heroImage = document.querySelector(".ride-with-eli");
 
 document.addEventListener('scroll', function() {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 75) {
         heroImage.width = "320";
         // console.log("hey!");
     } else {
@@ -45,7 +45,9 @@ eliPromise
         days.innerHTML = `${countdown}`;
         const progressBar = (data.sumDonations / data.fundraisingGoal) * 100;
         console.log(`${progressBar}% is current donations`);
-        progressValue.innerHTML = `<progress id="file" class="bar" max="100" value=${progressBar}></progress>`;
+        progressValue.innerHTML = `<div class="progress-wrapper"><div class = "progress-bar-bg"><div class = "progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:${progressBar}%"></div></div></div>
+        <p class = "raised">$${data.sumDonations} Raised</p><p class = "goal">Goal $${data.fundraisingGoal}</p>`;
+
     })
     .catch(handleError);
 

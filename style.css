@@ -39,7 +39,7 @@ html {
     max-width: 1200px;
     width: 90%;
     color: var(--green);
-    padding-top: 1em;
+    padding-top: 1.5em;
 }
 
 .wrapper {
@@ -105,9 +105,16 @@ a.button {
 a.button:hover {
     background: var(--yellow);
 }
-
+.donors > p:first-of-type{
+   margin: 1.5em 0 0.5em;
+}
 ul {
-    padding: 0.25em 0;
+    margin-top:0.2em;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: '-';
 }
 
 @media (max-width: 600px) {
@@ -122,7 +129,7 @@ ul {
     }
 }
 
-.progress {
+/* .progress {
     display: flex;
     height: 1.25em;
     overflow: hidden;
@@ -152,4 +159,99 @@ progress[value]::-webkit-progress-bar {
     background-color: var(--medium-green);
     transition: width .6s ease;
     height: 100%;
+} */
+
+
+.progress {
+    display: flex;
+    flex-flow: wrap;
 }
+
+.progress-wrapper {
+    width: 100%;
+    order: 1;
+}
+
+.progress-bar-bg {
+    display: flex;
+    height: 1.25em;
+    overflow: hidden;
+    border-radius: 5em;
+    background-color: #f9ddc6;
+}
+
+.progress-bar {
+    display: flex;
+    background-color: var(--yellow);
+    /* align-content: space-between;
+    flex-flow: row wrap;
+    justify-content: space-between; */
+    animation: progress-bar-anim 2s 1 forwards ease-in;
+    -webkit-animation: progress-bar-anim 2s 1 forwards ease-in-out;
+
+}
+
+
+.raised, .goal {
+    width: 50%;
+    display: inline-flex;
+    margin: 0px;
+}
+
+
+.raised {
+    order: 2;
+}
+
+.goal {
+    order: 3;
+    justify-content: flex-end;
+}
+
+p.raised, p.goal {
+    font-size: 0.7em;
+    font-weight: 300;
+    color: var(--yellow);
+}
+
+@-webkit-keyframes progress-bar-anim {
+    0% {
+      width: 0;
+    }
+  }
+  @keyframes progress-bar-anim {
+    0% {
+      width: 0;
+    }
+  }
+
+  @media only screen and (max-width: 641px) {
+    .raised, .goal {
+      text-align: center;
+      width: 100%;
+      display: flex;
+    }
+    .raised {
+      order: 1;
+      margin-bottom: 10px;
+    }
+    .goal {
+      order: 3;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+.raised, .goal {
+    width: 100%;
+    justify-content: center;
+}
+
+.progress-wrapper {
+    order: 2;
+}
+
+    p.raised, p.goal {
+    font-size: 0.8em;
+}
+
+  }
