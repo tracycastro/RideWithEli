@@ -117,7 +117,7 @@ li {
     list-style-type: '-';
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     h1 img {
         max-width: 250px;
     }
