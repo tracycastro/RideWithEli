@@ -3,7 +3,7 @@ function handleError(err) {
     console.log(err);
 }
 
-const days = document.querySelector(".days");
+// const days = document.querySelector(".days");
 const ride = document.querySelector(".ride");
 const target = document.querySelector(".target");
 const remaining = document.querySelector(".remaining");
@@ -42,7 +42,7 @@ eliPromise
         ride.innerHTML = `${data.eventName}`;
         target.innerHTML = `${data.fundraisingGoal}`;
         remaining.innerHTML = `${(data.fundraisingGoal) - (data.sumDonations)}`;
-        days.innerHTML = `${countdown}`;
+        // days.innerHTML = `${countdown}`;
         const progressBar = (data.sumDonations / data.fundraisingGoal) * 100;
         console.log(`${progressBar}% is current donations`);
         progressValue.innerHTML = `<div class="progress-wrapper"><div class = "progress-bar-bg"><div class = "progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:${progressBar}%"></div></div></div>
